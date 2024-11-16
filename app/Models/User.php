@@ -59,4 +59,9 @@ class User extends Authenticatable
     {
         return $this->belongsTo(Department::class);
     }
+
+    public function supervisedTitles()
+    {
+        return $this->hasMany(Supervisor::class);
+    }
 }
